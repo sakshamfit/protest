@@ -1,0 +1,13 @@
+{
+  "name": "india-protest-map",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A live map of protests across India, built from news reports via GDELT.",
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/fetch-gdelt.mjs",
+    "build": "node scripts/build-site.mjs",
+    "dev": "npm run build && npx --yes serve _site"
+  },
+  "engines": { "node": ">=20" }
+}
