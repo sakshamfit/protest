@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": { "deploymentEnabled": false },
+  "framework": null,
+  "installCommand": "true",
+  "buildCommand": "node scripts/fetch-gdelt.mjs && node scripts/build-site.mjs",
+  "outputDirectory": "_site",
+  "trailingSlash": false,
+  "headers": [
+    { "source": "/data/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=60, must-revalidate" }, { "key": "Access-Control-Allow-Origin", "value": "*" }] },
+    { "source": "/(og.png|apple-touch-icon.png|favicon.svg)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+  ]
+}

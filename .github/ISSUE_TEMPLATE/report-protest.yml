@@ -1,0 +1,51 @@
+name: Report a protest
+description: Suggest a protest to add to the checked list on the map
+title: "[Protest] "
+labels: ["protest-report"]
+body:
+  - type: input
+    id: headline
+    attributes:
+      label: Headline
+      placeholder: Students march to collectorate over hostel fees
+    validations:
+      required: true
+  - type: input
+    id: place
+    attributes:
+      label: City and venue
+      placeholder: Lucknow, Hazratganj
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      placeholder: 2026-10-11
+    validations:
+      required: true
+  - type: dropdown
+    id: issue
+    attributes:
+      label: Issue
+      options:
+        - Voter rolls & Election Commission
+        - Exam paper leaks
+        - Workers & farmers
+        - Ladakh statehood
+        - Other
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened
+      description: Who protested, what they asked for, and how authorities responded if reported.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source link
+      description: A news report or official statement others can check.
+      placeholder: https://
+    validations:
+      required: true

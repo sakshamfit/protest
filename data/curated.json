@@ -1,0 +1,331 @@
+{
+ "updated": "2026-10-11",
+ "events": [
+  {
+   "id": "e1",
+   "movement": "sir",
+   "date": "2026-10-10",
+   "city": "New Delhi",
+   "venue": "Jantar Mantar",
+   "lat": 28.6271,
+   "lng": 77.2166,
+   "title": "Jantar Mantar 2.0 blocked, mass detentions",
+   "summary": "The Cockroach Janta Party called a second rally at Jantar Mantar demanding the resignation of Chief Election Commissioner Gyanesh Kumar over voter deletions during the Special Intensive Revision (SIR) of electoral rolls. Founder Abhijeet Dipke and other leaders were detained on arrival at Delhi airport. Reuters, citing an unnamed official, put detentions in the capital above 2,000.",
+   "authorities": "Delhi Police said permission was refused because the request came in late. A 24-hour mobile internet shutdown was ordered in central Delhi and gatherings of five or more were barred in parts of the city. The Election Commission and the government reject the allegations of voter manipulation.",
+   "sources": [
+    {
+     "n": "CBC News",
+     "u": "https://www.cbc.ca/news/world/india-detains-thousands-youth-protests-9.7377069"
+    },
+    {
+     "n": "CNN",
+     "u": "https://www.cnn.com/2026/10/09/india/india-cockroach-party-protests-season-2-intl-hnk"
+    },
+    {
+     "n": "Amnesty International",
+     "u": "https://www.amnesty.org/en/latest/news/2026/10/india-delhi-police-must-facilitate-right-to-peaceful-protest-amid-lockdown-like-restrictions-in-capital/"
+    }
+   ]
+  },
+  {
+   "id": "e2",
+   "movement": "sir",
+   "date": "2026-10-08",
+   "city": "Bengaluru",
+   "venue": "Freedom Park",
+   "lat": 12.979,
+   "lng": 77.58,
+   "title": "People's Tribunal and chappal protest",
+   "summary": "A CJP demonstration with actors and online commentators staged a mock 'People's Tribunal' and a symbolic chappal protest aimed at the Election Commission and the CEC over SIR voter deletions.",
+   "sources": [
+    {
+     "n": "Wikipedia: 2026 anti-CEC protests",
+     "u": "https://en.wikipedia.org/wiki/2026_Anti-CEC_protests"
+    }
+   ]
+  },
+  {
+   "id": "e3",
+   "movement": "sir",
+   "date": "2026-10-07",
+   "city": "Jammu",
+   "venue": "",
+   "lat": 32.7266,
+   "lng": 74.857,
+   "title": "Opposition march for CEC's resignation",
+   "summary": "Supporters of opposition parties marched with placards demanding that the election chief step down.",
+   "sources": [
+    {
+     "n": "CNN (photo caption)",
+     "u": "https://www.cnn.com/2026/10/09/india/india-cockroach-party-protests-season-2-intl-hnk"
+    }
+   ]
+  },
+  {
+   "id": "e4",
+   "movement": "sir",
+   "date": "2026-10-06",
+   "city": "New Delhi",
+   "venue": "Election Commission office",
+   "lat": 28.6235,
+   "lng": 77.2105,
+   "title": "Opposition alliance's 'save democracy' march (announced)",
+   "summary": "An alliance of opposition parties announced a march to the Election Commission's office for Tuesday 6 October. On 5 October Congress president Mallikarjun Kharge called the demands for the CEC's resignation, cancelling the SIR and a return to ballot papers non-negotiable.",
+   "authorities": "Gyanesh Kumar had not publicly responded to the resignation demands as of 4 October.",
+   "sources": [
+    {
+     "n": "Al Jazeera",
+     "u": "https://www.aljazeera.com/news/2026/10/4/mass-protests-demanding-poll-chief-resignation-shake-india-for-third-day"
+    }
+   ]
+  },
+  {
+   "id": "e5",
+   "movement": "sir",
+   "date": "2026-10-04",
+   "city": "New Delhi",
+   "venue": "Ashoka Road",
+   "lat": 28.6195,
+   "lng": 77.2155,
+   "title": "Student unions detained on Ashoka Road",
+   "summary": "Members of AISA, SFI and other student organisations were detained by police while protesting for the CEC's resignation.",
+   "sources": [
+    {
+     "n": "Amnesty International (photo caption)",
+     "u": "https://www.amnesty.org/en/latest/news/2026/10/india-delhi-police-must-facilitate-right-to-peaceful-protest-amid-lockdown-like-restrictions-in-capital/"
+    }
+   ]
+  },
+  {
+   "id": "e6",
+   "movement": "sir",
+   "date": "2026-10-04",
+   "city": "Mumbai",
+   "venue": "",
+   "lat": 19.076,
+   "lng": 72.8777,
+   "title": "Third day of protests reaches Mumbai",
+   "summary": "Protesters carried the national flag through Mumbai on the third day of demonstrations demanding the CEC step down over the electoral roll revision.",
+   "sources": [
+    {
+     "n": "Al Jazeera",
+     "u": "https://www.aljazeera.com/news/2026/10/4/mass-protests-demanding-poll-chief-resignation-shake-india-for-third-day"
+    }
+   ]
+  },
+  {
+   "id": "e7",
+   "movement": "sir",
+   "date": "2026-10-02",
+   "city": "Mumbai",
+   "venue": "Shivaji Park",
+   "lat": 19.0269,
+   "lng": 72.8381,
+   "title": "Gandhi Jayanti rally and 'Jail Bharo Andolan'",
+   "summary": "The CJP launched 'Protest 2.0' on Gandhi Jayanti. The BBC described the Shivaji Park gathering as thousands of mostly young people.",
+   "sources": [
+    {
+     "n": "Wikipedia: 2026 anti-CEC protests",
+     "u": "https://en.wikipedia.org/wiki/2026_Anti-CEC_protests"
+    }
+   ]
+  },
+  {
+   "id": "e8",
+   "movement": "sir",
+   "date": "2026-09-26",
+   "city": "Bengaluru",
+   "venue": "",
+   "lat": 12.9716,
+   "lng": 77.5946,
+   "title": "Karnataka Congress protest",
+   "summary": "Karnataka Congress protested seeking Gyanesh Kumar's resignation and arrest, alleging voter deletions in Bihar and elsewhere.",
+   "sources": [
+    {
+     "n": "The News Minute",
+     "u": "https://www.thenewsminute.com/news/congress-holds-nationwide-protests-demanding-cec-gyanesh-kumars-resignation"
+    }
+   ]
+  },
+  {
+   "id": "e9",
+   "movement": "sir",
+   "date": "2026-09-25",
+   "city": "Patna",
+   "venue": "Election Commission office",
+   "lat": 25.5941,
+   "lng": 85.1376,
+   "title": "Water cannon used on Congress march",
+   "summary": "Congress workers marched towards the Election Commission office and tried to cross barricades. Police used water cannons and detained several people.",
+   "sources": [
+    {
+     "n": "The News Minute",
+     "u": "https://www.thenewsminute.com/news/congress-holds-nationwide-protests-demanding-cec-gyanesh-kumars-resignation"
+    }
+   ]
+  },
+  {
+   "id": "e10",
+   "movement": "sir",
+   "date": "2026-09-25",
+   "city": "Guwahati",
+   "venue": "",
+   "lat": 26.1445,
+   "lng": 91.7362,
+   "title": "Assam Congress leaders detained",
+   "summary": "State Congress president Gaurav Gogoi and other senior leaders were detained while trying to cross police barricades.",
+   "sources": [
+    {
+     "n": "The News Minute",
+     "u": "https://www.thenewsminute.com/news/congress-holds-nationwide-protests-demanding-cec-gyanesh-kumars-resignation"
+    }
+   ]
+  },
+  {
+   "id": "e11",
+   "movement": "sir",
+   "date": "2026-09-25",
+   "city": "Kolkata",
+   "venue": "College Street",
+   "lat": 22.5745,
+   "lng": 88.363,
+   "title": "March to the Chief Electoral Officer",
+   "summary": "West Bengal Congress marched from the Calcutta University campus to the state Chief Electoral Officer's office. Same-day Congress protests were also reported in Punjab, Uttar Pradesh, Odisha, Goa, Uttarakhand, Himachal Pradesh, Manipur and Arunachal Pradesh.",
+   "sources": [
+    {
+     "n": "The News Minute",
+     "u": "https://www.thenewsminute.com/news/congress-holds-nationwide-protests-demanding-cec-gyanesh-kumars-resignation"
+    }
+   ]
+  },
+  {
+   "id": "e12",
+   "movement": "exam",
+   "date": "2026-06-11",
+   "city": "Pune",
+   "venue": "Savitribai Phule Pune University",
+   "lat": 18.5523,
+   "lng": 73.8245,
+   "title": "Exam-leak campaign opens in Pune",
+   "summary": "The CJP began a nationwide campaign demanding that Education Minister Dharmendra Pradhan resign over exam paper leaks, and released an 'exam manifesto'. Pradhan's eventual resignation was widely seen as a win for the movement.",
+   "sources": [
+    {
+     "n": "Al Jazeera",
+     "u": "https://www.aljazeera.com/news/2026/6/16/my-voice-is-being-heard-a-month-of-indias-cockroach-janta-party"
+    },
+    {
+     "n": "Wikipedia: Cockroach Janta Party",
+     "u": "https://en.wikipedia.org/wiki/Cockroach_Janta_Party"
+    }
+   ]
+  },
+  {
+   "id": "e13",
+   "movement": "exam",
+   "date": "2026-06-14",
+   "city": "Hyderabad",
+   "venue": "Dharna Chowk",
+   "lat": 17.414,
+   "lng": 78.492,
+   "title": "Exam-leak rally in Hyderabad",
+   "summary": "CJP supporters rallied with placards as part of the exam paper leak campaign; crowds at the June rallies ran into the thousands.",
+   "sources": [
+    {
+     "n": "Al Jazeera",
+     "u": "https://www.aljazeera.com/news/2026/6/16/my-voice-is-being-heard-a-month-of-indias-cockroach-janta-party"
+    }
+   ]
+  },
+  {
+   "id": "e14",
+   "movement": "exam",
+   "date": "2026-06-15",
+   "city": "Jaipur",
+   "venue": "",
+   "lat": 26.9124,
+   "lng": 75.7873,
+   "title": "Founder attacked at Jaipur rally",
+   "summary": "At a CJP rally in Jaipur, a man attacked Abhijeet Dipke while supporters were carrying him on their shoulders.",
+   "sources": [
+    {
+     "n": "Al Jazeera",
+     "u": "https://www.aljazeera.com/news/2026/6/16/my-voice-is-being-heard-a-month-of-indias-cockroach-janta-party"
+    }
+   ]
+  },
+  {
+   "id": "e15",
+   "movement": "exam",
+   "date": "2026-06-13",
+   "city": "Amritsar",
+   "venue": "",
+   "lat": 31.634,
+   "lng": 74.8723,
+   "title": "Exam-leak rally in Amritsar",
+   "summary": "One of the June CJP rallies against exam paper leaks.",
+   "sources": [
+    {
+     "n": "Al Jazeera",
+     "u": "https://www.aljazeera.com/news/2026/6/16/my-voice-is-being-heard-a-month-of-indias-cockroach-janta-party"
+    }
+   ]
+  },
+  {
+   "id": "e16",
+   "movement": "labour",
+   "date": "2026-02-12",
+   "city": "New Delhi",
+   "venue": "Nationwide",
+   "lat": 28.64,
+   "lng": 77.235,
+   "title": "Nationwide general strike",
+   "summary": "Central trade unions and farmers' groups held a one-day strike against the new labour codes and the interim trade deal with the US. Organisers reported actions in more than 600 districts.",
+   "sources": [
+    {
+     "n": "Washington Post",
+     "u": "https://www.washingtonpost.com/world/2026/02/12/india-modi-protest-trade-deal-us-farmers/da80a868-07f8-11f1-b196-5e1986b3575c_story.html"
+    },
+    {
+     "n": "ITUC Asia-Pacific",
+     "u": "https://www.ituc-ap.org/news-and-updates/india-historic-nationwide-strike-sees-millions-of-workers-and-farmers-mobilise-for-decent-work-and-social-justice"
+    }
+   ]
+  },
+  {
+   "id": "e17",
+   "movement": "labour",
+   "ongoing": true,
+   "date": "2026-04-13",
+   "city": "Noida",
+   "venue": "",
+   "lat": 28.5355,
+   "lng": 77.391,
+   "title": "Noida workers' wage protests",
+   "summary": "Factory workers' protests over wages turned violent in April, when police fired tear gas and more than 300 people were arrested; domestic workers later joined. Further developments were reported in September.",
+   "sources": [
+    {
+     "n": "Wikipedia: 2026 Noida workers protest",
+     "u": "https://en.wikipedia.org/wiki/2026_Noida_workers_protest"
+    }
+   ]
+  },
+  {
+   "id": "e18",
+   "movement": "ladakh",
+   "ongoing": true,
+   "date": "2021-01-01",
+   "city": "Leh",
+   "venue": "",
+   "lat": 34.1526,
+   "lng": 77.5771,
+   "title": "Ladakh statehood movement",
+   "summary": "Since 2021 the Leh Apex Body and Kargil Democratic Alliance have pushed for statehood and Sixth Schedule protections through fasts, marches and talks with the Home Ministry. Protests turned violent in September 2025.",
+   "sources": [
+    {
+     "n": "Wikipedia: Ladakh protests",
+     "u": "https://en.wikipedia.org/wiki/Ladakh_protests"
+    }
+   ]
+  }
+ ]
+}
