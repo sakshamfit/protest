@@ -1,0 +1,119 @@
+name: Sync from upstream
+
+# This copy of the project tracks AVIVASHISHTA29/india-protest-map. Every 6 hours
+# this workflow merges any new upstream commits into main and pushes them, which
+# also triggers "Update and deploy" so the site is rebuilt with the new code.
+#
+# The 30-minute data refresh is a separate thing and lives in update.yml; this
+# file only keeps the *code* in step with the project it was cloned from.
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"   # every 6 hours at :23 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write   # push the merge to main
+  issues: write     # report a conflict that needs a human
+  actions: write    # keepalive: re-enable the scheduled workflows
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+env:
+  UPSTREAM_REPO: AVIVASHISHTA29/india-protest-map
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fetch upstream
+        run: |
+          url="https://github.com/${UPSTREAM_REPO}.git"
+          git remote add upstream "$url" 2>/dev/null || git remote set-url upstream "$url"
+          git fetch --no-tags upstream main
+
+      - name: Merge upstream/main
+        id: merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+          GITHUB_OUTPUT="${GITHUB_OUTPUT:-/dev/null}"   # so this step can also be run by hand
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          before=$(git rev-parse HEAD)
+
+          if git merge --no-ff --no-edit -m "chore: sync from ${UPSTREAM_REPO}" upstream/main; then
+            after=$(git rev-parse HEAD)
+            if [ "$before" = "$after" ]; then
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              echo "Already up to date with ${UPSTREAM_REPO}."
+            else
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "Merged from ${UPSTREAM_REPO}:"
+              git log --oneline "${before}..${after}" | head -30
+            fi
+            exit 0
+          fi
+
+          # The merge stopped on a conflict: leave main exactly as it was and tell a human.
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          conflicted=$(git diff --name-only --diff-filter=U | paste -sd, -)
+          git merge --abort 2>/dev/null || true   # nothing to undo if the merge never started
+          echo "::warning::upstream merge conflicts in: ${conflicted:-unknown}"
+          open_issues=$(gh issue list --state open --search "in:title Upstream sync needs a merge" --json number --jq length)
+          if [ "$open_issues" = "0" ]; then
+            gh issue create \
+              --title "Upstream sync needs a merge: ${conflicted}" \
+              --body "$(cat <<EOF
+          The scheduled sync from [${UPSTREAM_REPO}](https://github.com/${UPSTREAM_REPO}) could not be
+          merged automatically, because both sides changed: ${conflicted}
+
+          Nothing was pushed and \`main\` is untouched. To finish it by hand:
+
+          \`\`\`bash
+          git remote add upstream https://github.com/${UPSTREAM_REPO}.git   # once
+          git fetch upstream main
+          git checkout main
+          git merge upstream/main        # resolve the files listed above
+          git push
+          \`\`\`
+
+          Once the conflict is resolved this issue can be closed; the sync runs again every 6 hours.
+          EOF
+          )" || echo "::warning::could not open an issue for the conflict"
+          fi
+
+      - name: Push main
+        if: steps.merge.outputs.changed == 'true'
+        run: git push origin HEAD:main
+
+      # GitHub pauses every scheduled workflow in a repo that sees no commit for 60
+      # days. Re-enabling is a no-op when they are already on, and once a month we
+      # also push an empty commit so that clock keeps getting reset even though the
+      # data pipeline never commits anything.
+      - name: Keep the schedules alive
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for wf in update.yml sync-upstream.yml; do
+            gh api -X PUT "repos/${{ github.repository }}/actions/workflows/${wf}/enable" \
+              && echo "enabled ${wf}" || echo "::warning::could not enable ${wf}"
+          done
+          age_days=$(( ( $(date +%s) - $(git log -1 --format=%ct) ) / 86400 ))
+          if [ "$age_days" -ge 28 ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit --allow-empty -m "chore: keepalive commit (${age_days} days without a change)"
+            git push origin HEAD:main
+            echo "Pushed a keepalive commit after ${age_days} idle days."
+          fi

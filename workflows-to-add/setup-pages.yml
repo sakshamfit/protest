@@ -1,0 +1,37 @@
+name: Enable GitHub Pages
+
+# One-off and idempotent: makes sure this repo publishes Pages from GitHub
+# Actions, which is what update.yml's deploy-pages step needs. It runs whenever
+# this file lands on main (so a fresh copy configures itself) and can be re-run
+# by hand from Actions → Enable GitHub Pages → Run workflow.
+#
+# If Pages is already on, configure-pages simply reports the existing site.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/setup-pages.yml"
+
+permissions:
+  pages: write
+  id-token: write
+
+concurrency:
+  group: enable-pages
+  cancel-in-progress: false
+
+jobs:
+  enable:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - id: pages
+        uses: actions/configure-pages@v6
+        with:
+          enablement: true
+      - name: Report
+        run: |
+          echo "Pages source is GitHub Actions for ${{ github.repository }}."
+          echo "Site: ${{ steps.pages.outputs.base_url }}"
